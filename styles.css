@@ -1,0 +1,178 @@
+:root {
+    --color1: #002fff;
+    --color2: #0067bb;
+    --color3: #333333;
+}
+
+html {
+    font-size: 10px;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+} */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* PAGE WIDE STYLE */
+
+section {
+    width: 100%;
+}
+
+h1, p, a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 6rem;
+    text-align: center;
+}
+
+p, a {
+    font-size: 2rem;
+}
+
+.line-breaker {
+    width: 100%;
+}
+
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #fff;
+    border-bottom: 3px solid var(--color1);
+}
+
+#navbar ul {
+    display: flex;
+}
+
+#navbar li {
+    list-style-type: none;
+}
+
+#navbar a {
+    color: black;
+    display: block;
+    font-weight: 500;    
+    text-decoration: none;
+    padding: 20px 30px;
+}
+
+#navbar a:hover,
+#navbar a:focus {
+    text-decoration: underline;
+    color: #fff;
+    background-color: var(--color1);
+    outline: none;
+}
+
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-section h1 {
+    color: var(--color1);
+    font-weight: 600;    
+    width: 100%;
+}
+
+#welcome-section p {
+    font-size: 4rem;
+    font-weight: 300;
+    text-align: center;
+    font-style: italic;
+}
+
+#projects {
+    background-color: var(--color2);
+    padding: 5vh 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects h1 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 5rem;
+}
+
+.tile-container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;    
+}
+
+.tile-container .project-tile {
+    margin-top: 5vh;
+    border: 3px solid var(--color3);
+    border-radius: 5px;
+}
+
+.project-tile img {
+    display: block;
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+}
+
+.project-tile .caption {
+    background-color: var(--color3);
+    padding: 20px 0;
+}
+
+.project-tile p,
+.project-tile a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+#projects .show-more {
+    margin: 5vh 0;
+}
+
+#projects .show-more a {
+    color: white;
+    text-decoration: none;
+    background-color: var(--color3);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.show-more span {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#projects .show-more a:hover {
+    background-color: #c90505;
+}
+
+#contact-info {
+    height: 80vh;
+    background-color: var(--color3);
+}
