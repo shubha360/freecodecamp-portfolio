@@ -2,6 +2,7 @@
     --color1: #002fff;
     --color2: #0067bb;
     --color3: #333333;
+    --color4: #ff0055;
 }
 
 html {
@@ -84,6 +85,7 @@ p, a {
 
 #welcome-section {
     height: 100vh;
+    padding: 0 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,23 +121,18 @@ p, a {
 
 .tile-container {
     margin: 0 auto;
-    width: 95%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;    
 }
 
-@media (max-width: 1400px) {
-    .tile-container {
-        width: 95%;
-    }
-}
-
 .tile-container .project-tile {
     margin-top: 5vh;
     border: 3px solid var(--color3);
     border-radius: 5px;
+    box-shadow: 0 3px 5px 0px rgb(53, 60, 100);
 }
 
 .project-tile img {
@@ -175,11 +172,11 @@ p, a {
 }
 
 #projects .show-more a:hover {
-    background-color: #d90036;
+    background-color: var(--color4);
 }
 
 #contact-info {
-    height: 100vh;
+    height: 80vh;
     background-color: var(--color3);
     display: flex;
     align-items: center;
@@ -188,6 +185,7 @@ p, a {
 
 .contact-container {
     width: 100%;
+    padding: 0 20px;
 }
 
 #contact-info * {
@@ -215,8 +213,9 @@ p, a {
 #contact-info a {
     font-weight: 600;
     text-decoration: none;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin: 0 1.5%;
+    white-space: nowrap;    
 }
 
 #contact-info a:hover {
@@ -228,7 +227,7 @@ p, a {
 }
 
 footer {
-    background-color: var(--color1);
+    background-color: var(--color4);
     display: flex;
     justify-content: space-between;
     padding: 2% 5%;
@@ -254,4 +253,80 @@ footer .icons a {
 
 footer .icons a:hover {
     border-bottom: 1px solid #fff;
+}
+
+@media (max-width: 1530px) {
+    .tile-container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 800px) {
+    #welcome-section h1 {
+        font-size: 5rem;
+    }
+    
+    #welcome-section p {
+        font-size: 3rem;
+    }
+
+    #contact-info h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #navbar {
+        justify-content: center;
+    }
+
+    footer div {
+        width: 100%;       
+    }
+}
+
+@media (max-width: 450px) {
+    
+    .project-tile img {
+        width: 280px;
+        height: 280px;
+    }
+
+    #welcome-section h1 {
+        font-size: 4rem;
+    }
+    
+    #welcome-section p {
+        font-size: 2.5rem;
+    }
+
+    #contact-info h1 {
+        font-size: 4rem;
+    }
+    
+    #contact-info p {
+        font-size: 1.4rem;
+        margin-top: 10px;
+        font-style: italic;
+        font-weight: 300;
+    }
+    
+    #contact-info img {
+        width: 16px;
+        margin-right: 0.5rem;
+    }
+    
+    #contact-info a {
+        font-size: 2rem;
+    }
+
+    footer {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 350px) {
+    #navbar a {
+        padding: 20px 20px;
+    }
 }
